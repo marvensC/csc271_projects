@@ -14,7 +14,7 @@ This is the movies page for my website
 
 <body>
 
-</body>
+
 <!--banner (first image)-->
 <img src="images/temp_movies_banner.png" alt="Movies Banner" style="width:100%; max-width:900px; margin:20px auto; display:block;">
 
@@ -34,7 +34,18 @@ This is the movies page for my website
 <img src="images/movie_collage.png" alt="Movie Posters Collage" style="width:320px; max-width:90vw; margin:20px auto; display:block;">
 
 <!--table with movies and embedded trailers-->
-<table border="1" cellpadding="8" style="width:100%; max-width:700px; margin:auto;">
+<table style="width:100%; max-width:700px; margin:auto; border-collapse:collapse;">
+  <style>
+    table td, table th {
+      padding:8px;
+      border:1px solid #333;
+    }
+    table {
+      padding: 8px;
+      border:1px solid #333;
+      border-collapse:collapse;
+    }
+  </style>
   <thead>
     <tr>
       <th>Title</th>
@@ -46,21 +57,21 @@ This is the movies page for my website
     <tr>
       <td>Inception</td>
       <td>
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception Trailer" frameborder="0" allowfullscreen></iframe>
+  <iframe width="250" height="140" src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception Trailer" style="border:none;" allowfullscreen></iframe>
       </td>
       <td>8.8</td>
     </tr>
     <tr>
       <td>Black Panther</td>
       <td>
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/xjDjIWPwcPU" title="Black Panther Trailer" frameborder="0" allowfullscreen></iframe>
+  <iframe width="250" height="140" src="https://www.youtube.com/embed/xjDjIWPwcPU" title="Black Panther Trailer" style="border:none;" allowfullscreen></iframe>
       </td>
       <td>7.3</td>
     </tr>
     <tr>
       <td>Interstellar</td>
       <td>
-        <iframe width="250" height="140" src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Interstellar Trailer" frameborder="0" allowfullscreen></iframe>
+  <iframe width="250" height="140" src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Interstellar Trailer" style="border:none;" allowfullscreen></iframe>
       </td>
       <td>8.6</td>
     </tr>
@@ -85,3 +96,5 @@ This is the movies page for my website
   <button type="submit">Submit</button>
 </form>
 </html>
+
+</body>
