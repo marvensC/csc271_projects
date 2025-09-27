@@ -1,0 +1,87 @@
+<!--
+Marvens Sainterlien 
+9/27/2025
+This is the movies page for my website
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mtrack Movies</title>
+</head>
+
+<body>
+
+</body>
+<!--banner (first image)-->
+<img src="images/temp_movies_banner.png" alt="Movies Banner" style="width:100%; max-width:900px; margin:20px auto; display:block;">
+
+<!--logo  -->
+<img src="images/logo2.png" alt="Mtrack Logo" style="height:60px;">
+
+<!--main header-->
+<h1> Movies</h1>
+
+<!--home link-->
+<a href="homepage.html">🏠 Home </a>
+
+<!--description-->
+<p>Browse movies, add them to your watchlist, mark favorites, and keep track of what you want to watch next, all in one place!</p>
+
+<!--second image -->
+<img src="images/movie_collage.png" alt="Movie Posters Collage" style="width:320px; max-width:90vw; margin:20px auto; display:block;">
+
+<!--table with movies and embedded trailers-->
+<table border="1" cellpadding="8" style="width:100%; max-width:700px; margin:auto;">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Trailer</th>
+      <th>IMDb Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Inception</td>
+      <td>
+        <iframe width="250" height="140" src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception Trailer" frameborder="0" allowfullscreen></iframe>
+      </td>
+      <td>8.8</td>
+    </tr>
+    <tr>
+      <td>Black Panther</td>
+      <td>
+        <iframe width="250" height="140" src="https://www.youtube.com/embed/xjDjIWPwcPU" title="Black Panther Trailer" frameborder="0" allowfullscreen></iframe>
+      </td>
+      <td>7.3</td>
+    </tr>
+    <tr>
+      <td>Interstellar</td>
+      <td>
+        <iframe width="250" height="140" src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Interstellar Trailer" frameborder="0" allowfullscreen></iframe>
+      </td>
+      <td>8.6</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--form-->
+
+<form id="favoriteForm" style="max-width:400px; margin:32px auto; border:1px solid #ccc; padding:16px; border-radius:8px;">
+  <h3>Share Your Favorites</h3>
+  <label><strong>Favorite Genres:</strong></label><br>
+  <input type="checkbox" name="genre" value="Action"> Action <br>
+  <input type="checkbox" name="genre" value="Comedy"> Comedy <br>
+  <input type="checkbox" name="genre" value="Drama"> Drama <br>
+  <input type="checkbox" name="genre" value="Sci-Fi"> Sci-Fi <br>
+  <input type="checkbox" name="genre" value="Horror"> Horror<br><br>
+
+  <label for="movieTitles"><strong>Favorite Movies:</strong></label> <br>
+  <textarea id="movieTitles" name="movieTitles" maxlength="200" placeholder="Enter your favorite movies" rows="3" style="width:100%;"></textarea> <br>
+  <br>
+
+  <button type="submit">Submit</button>
+</form>
+</html>
