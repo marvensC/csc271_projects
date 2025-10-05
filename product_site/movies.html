@@ -2,6 +2,7 @@
 Marvens Sainterlien 
 9/27/2025
 This is the movies page for my website
+Plan to update movies to be something like shows.
 -->
 
 
@@ -9,43 +10,37 @@ This is the movies page for my website
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mtrack Movies</title>
-<style>
-  table td, table th {
-    padding:8px;
-    border:1px solid #333;
-  }
-  table {
-    padding: 8px;
-    border:1px solid #333;
-    border-collapse:collapse;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
+
+<title>Mtrak Movies</title>
+
 </head>
 
 <body>
 
 
-<!--banner (first image)-->
-<img src="images/temp_movies_banner.png" alt="Movies Banner" style="width:100%; max-width:900px; margin:20px auto; display:block;">
-
+<!--banner -->
+<img src="images/temp_banner.png" alt=" Banner" id="banner" >
 <!--logo  -->
-<img src="images/logo2.png" alt="Mtrack Logo" style="height:60px;">
+<img src="images/logo2.svg" alt="Mtrack Logo" id="logo">
 
 <!--main header-->
 <h1> Movies</h1>
 
-<!--home link-->
-<a href="homepage.html">🏠 Home </a>
+<!-- links-->
+ <nav class="primary-nav">
+<a href="homepage.html">🏠 Home </a> 
+<a href="shows.html">📺 Shows</a>
+</nav>
 
 <!--description-->
 <p>Browse movies, add them to your watchlist, mark favorites, and keep track of what you want to watch next, all in one place!</p>
 
-<!--second image -->
-<img src="images/movie_collage.png" alt="Movie Posters Collage" style="width:320px; max-width:90vw; margin:20px auto; display:block;">
 
+<!--second image -->
+<img src="images/movie_collage.png" alt="Movie Posters Collage" class="temp-movie-collage" >
 <!--table with movies and embedded trailers-->
-<table style="width:100%; max-width:700px; margin:auto; border-collapse:collapse;">
+<table >
   <thead>
     <tr>
       <th>Title</th>
@@ -80,7 +75,7 @@ This is the movies page for my website
 
 <!--form-->
 
-<form id="favoriteForm" style="max-width:400px; margin:32px auto; border:1px solid #ccc; padding:16px; border-radius:8px;">
+<form id="favoriteForm" class="stack">
   <h3>Share Your Favorites</h3>
   <label><strong>Favorite Genres:</strong></label><br>
   <input type="checkbox" name="genre" value="Action"> Action <br>

@@ -1,0 +1,133 @@
+<!--
+Marvens Sainterlien 
+9/30/2025
+This is the shows page for my website
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Mtrak Shows</title>
+</head>
+
+<body>
+
+<!--banner -->
+<img src="images/temp_banner.png" alt=" Banner" id="banner">
+
+
+<!--logo  -->
+<img src="images/logo2.svg" alt="Mtrack Logo" id="logo">
+
+<!--main header-->
+<h1> Shows</h1>
+
+
+
+<!-- links-->
+ <nav class="primary-nav">
+<a href="homepage.html">🏠 Home </a> 
+<a href="movies.html">🎬 Movies</a>
+</nav>
+
+<!--description-->
+<p>Browse shows, add them to your watchlist, mark favorites, and keep track of what you want to watch next, all in one place!</p>
+
+
+<!--discover section -->
+
+<section id="shows-discover-section" class="shows-discover-section">
+	<h2>Discover Shows 📺</h2>
+<div class="show-grid">
+
+
+	<!--example 1-->
+	<article class="show-card" data-show-id="breaking-bad">
+		<img src="images/placeholder.svg" alt="Breaking Bad poster">
+		<h3>Breaking Bad</h3>
+		<div class="show-info">
+			<span>2008 • 5 Seasons</span>
+			<div class="show-tags">
+				<span class="tag">Crime</span>
+				<span class="tag">Thriller</span>
+				<span class="tag">Action</span>
+			</div>
+		</div>
+		<div class="actions">
+			<button type="button" data-action="watchlist" class="watch-btn">Add to Watchlist</button>
+			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
+			<label class="status"> Status
+        <select data-action="status">
+					<option>🕒 Planning</option>
+					<option>Watching</option>
+					<option>✅ Completed</option>
+					<option>On Hold</option>
+					<option>Dropped</option>
+				</select>
+			</label>
+		</div>
+	</article>
+
+
+	<!--example 2-->
+	<article class="show-card" data-show-id="the-office-us">
+		<img src="images/placeholder.svg" alt="The Office (US) poster">
+		<h3>The Office (US)</h3>
+		<div class="show-info">
+			<span>2005 • 9 Seasons</span>
+			<div class="show-tags">
+				<span class="tag">Comedy</span>
+			</div>
+		</div>
+		<div class="actions">
+			<button type="button" data-action="watchlist" class="watch-btn">Add to Watchlist</button>
+			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
+			<label class="status">Status
+				<select data-action="status">
+					<option>🕒 Planning</option>
+					<option>Watching</option>
+					<option>✅ Completed</option>
+					<option>On Hold</option>
+					<option>Dropped</option>
+				</select>
+			</label>
+		</div>
+	</article>
+
+
+	<!--example 3-->
+	<article class="show-card" data-show-id="the-mandalorian">
+		<img src="images/placeholder.svg" alt="The Mandalorian poster">
+		<h3>The Mandalorian</h3>
+		<div class="show-info">
+			<span>2019 • 3 Seasons</span>
+			<div class="show-tags">
+				<span class="tag">Sci-Fi</span>
+				<span class="tag">Action</span>
+				<span class="tag">Adventure</span>
+			</div>
+		</div>
+		<div class="actions">
+			<button type="button" data-action="watchlist" class="watch-btn">Add to Watchlist</button>
+			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
+			<label class="status">Status
+				<select data-action="status">
+					<option>🕒 Planning</option>
+					<option>Watching</option>
+					<option>✅ Completed</option>
+					<option>On Hold</option>
+					<option>Dropped</option>
+				</select>
+			</label>
+		</div>
+	</article>
+
+
+</div>
+</section>
+
+</body>
+</html>
