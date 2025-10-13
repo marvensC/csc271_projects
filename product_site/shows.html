@@ -10,28 +10,39 @@ This is the shows page for my website
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/style.css">
-<title>Mtrak Shows</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mtrack Shows</title>
 </head>
 
 <body>
 
-<!--banner -->
-<img src="images/temp_banner.png" alt=" Banner" id="banner">
-
+ <!-- ****** START HEADER ****** -->
+	<div class="header">
 
 <!--logo  -->
-<img src="images/logo2.svg" alt="Mtrack Logo" id="logo">
-
-<!--main header-->
-<h1> Shows</h1>
-
-
+<img src="images/logo.svg" alt="Mtrack Logo" id="logo">
 
 <!-- links-->
  <nav class="primary-nav">
-<a href="homepage.html">🏠 Home </a> 
-<a href="movies.html">🎬 Movies</a>
-</nav>
+	<a class="nav-link " href="homepage.html">🏠 Home</a>
+	
+		<a class="nav-link " href="movies.html">🎬 Movies</a>
+		<a class="nav-link  current" href="shows.html">📺 Shows</a>
+	
+ </nav>
+
+
+</div>
+
+ <!-- ****** END HEADER ****** -->
+
+
+ <!-- ****** START CONTENT ****** -->
+
+<div class="content">
+
+<!--main header-->
+<h1>  Shows</h1>
 
 <!--description-->
 <p>Browse shows, add them to your watchlist, mark favorites, and keep track of what you want to watch next, all in one place!</p>
@@ -39,25 +50,25 @@ This is the shows page for my website
 
 <!--discover section -->
 
-<section id="shows-discover-section" class="shows-discover-section">
-	<h2>Discover Shows 📺</h2>
-<div class="show-grid">
+<section id="media-section" class="media-section">
+	<h2>📺 Discover Shows </h2>
+<div class="media-grid">
 
 
 	<!--example 1-->
-	<article class="show-card" data-show-id="breaking-bad">
+	<article class="media-card" data-show-id="breaking-bad">
 		<img src="images/placeholder.svg" alt="Breaking Bad poster">
 		<h3>Breaking Bad</h3>
-		<div class="show-info">
+		<div class="media-info">
 			<span>2008 • 5 Seasons</span>
-			<div class="show-tags">
-				<span class="tag">Crime</span>
-				<span class="tag">Thriller</span>
-				<span class="tag">Action</span>
+			<div class="media-tags">
+				<span >Crime</span>
+				<span >Thriller</span>
+				<span >Action</span>
 			</div>
 		</div>
 		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">Add to Watchlist</button>
+			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
 			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
 			<label class="status"> Status
         <select data-action="status">
@@ -73,17 +84,17 @@ This is the shows page for my website
 
 
 	<!--example 2-->
-	<article class="show-card" data-show-id="the-office-us">
+	<article class="media-card" data-show-id="the-office-us">
 		<img src="images/placeholder.svg" alt="The Office (US) poster">
 		<h3>The Office (US)</h3>
-		<div class="show-info">
+		<div class="media-info">
 			<span>2005 • 9 Seasons</span>
-			<div class="show-tags">
-				<span class="tag">Comedy</span>
+			<div class="media-tags">
+				<span >Comedy</span>
 			</div>
 		</div>
 		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">Add to Watchlist</button>
+			<button type="button" data-action="watchlist" class="watch-btn"> 📋 Add to Watchlist</button>
 			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
 			<label class="status">Status
 				<select data-action="status">
@@ -99,19 +110,19 @@ This is the shows page for my website
 
 
 	<!--example 3-->
-	<article class="show-card" data-show-id="the-mandalorian">
+	<article class="media-card" data-show-id="the-mandalorian">
 		<img src="images/placeholder.svg" alt="The Mandalorian poster">
 		<h3>The Mandalorian</h3>
-		<div class="show-info">
+		<div class="media-info">
 			<span>2019 • 3 Seasons</span>
-			<div class="show-tags">
-				<span class="tag">Sci-Fi</span>
-				<span class="tag">Action</span>
-				<span class="tag">Adventure</span>
+			<div class="media-tags">
+				<span >Sci-Fi</span>
+				<span >Action</span>
+				<span >Adventure</span>
 			</div>
 		</div>
 		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">Add to Watchlist</button>
+			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
 			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
 			<label class="status">Status
 				<select data-action="status">
@@ -128,6 +139,10 @@ This is the shows page for my website
 
 </div>
 </section>
+
+</div>
+ <!-- ****** END CONTENT ****** -->
+
 
 </body>
 </html>
