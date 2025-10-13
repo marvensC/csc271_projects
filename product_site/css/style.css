@@ -1,4 +1,6 @@
 
+
+
 /*
 Marvens Sainterlien 
 9/30/2025
@@ -6,67 +8,141 @@ This is the movies page for my website
 */
 
 body {
-  background-color: rgb(208, 220, 223);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  align-items: center;
+  
+  background-color: #f8f9fa; 
 }
 
 h1 {
   color: #1a1a1a;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 32px;
 }
 
+/*  header class */
+.header {
+  background-color: #2563eb; 
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: clip; 
+  margin: 10px;
+  border: 3px solid #e5e7eb;
+  
+}
 
+/*  content class */
+.content {
+  background-color: lightblue; 
+  padding: 10px;
+  border: 3px solid #e5e7eb; 
+  margin: 10px; 
+  min-height: calc(100vh - 80px); 
+  box-sizing: border-box;
+}
 
-/* Link styling: differentiate unvisited, visited, hover, focus, and active states */
-/* link -> visited -> hover -> focus -> active */
-a:link {
-  color: #0b3d91; /* deep blue for unvisited */
-  text-decoration: none;
+/*  nav class */
+.primary-nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
   font-weight: 600;
-  transition: color .15s ease, text-decoration-color .15s ease;
 }
-a:visited {
-  color: #5a2d91; /* purple for visited */
+
+/* nav link class */
+a.nav-link {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color 0.12s ease, transform 0.08s ease;
+  text-decoration: none;
 }
-a:hover {
-  color: #c0392b; /* accent on hover */
-  text-decoration: underline;
-  text-underline-offset: 3px;
+
+/* Hover state */
+.primary-nav a:hover {
+  background-color: rgb(234, 232, 232) ;
+  color: #ac0c0c;
+  transform: translateY(-1px);
 }
-a:focus {
-  outline: 2px solid #c0392b;
+
+/* Focus and active states for accessibility */
+.primary-nav a:focus{
+  outline: 3px solid rgba(255,255,255,0.18);
   outline-offset: 2px;
-  text-decoration: underline;
 }
-a:active {
-  color: #000000; /* pressed */
+.primary-nav a:active {
+  background-color: rgba(255,255,255,0.22);
+  color: #000000;
+}
+
+/* Current/active page link */
+.nav-link.current {
+  background-color: #ffffff;
+  color: #0b74de;
+}
+
+/* Media query for screens 600px wide or less */
+@media (max-width: 600px) {
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 10px;
+    margin: 0 5px;
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    font-size: 19px;
+    padding: 15px 10px;
+    margin: 0 5px;
+  }
+
+  .primary-nav {
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 4px;
+  }
+
+  a.nav-link {
+    font-size: 14px; 
+    padding: 6px 10px; 
+    text-align: center;
+  }
+  
+  
+  
+  img {
+    max-width: 100%; 
+    height: auto;
+    max-height: none; 
+  }
+}
+
+/* img styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px;
+}
+
+#logo {
+  height:60px;
+  flex: 0 0 auto;
 }
 
 
-/* table for movies (temporary) */
-table td, table th {
-    padding:8px;
-    border:1px solid #333;
-  }
-table {
-    padding: 8px;
-    border:1px solid #333;
-    border-collapse:collapse;
-    width:100%; 
-    max-width:700px;
-     margin:auto; 
-     border-collapse:collapse;
-  }
 
 /*paragraph*/
 p {
-  font-family: 'Times New Roman', Times, serif, Georgia;
   color:#000000;
 }
-/* ID selector movies page*/
+
+
+/*  form ID selector in movies page */
 #favoriteForm {
   background: #ffffff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -77,76 +153,64 @@ p {
   border-radius:8px;
 }
 
-/* Class selector shows pages */
-.show-card {
-  background:#fff;
-  border:1px solid #ccc;
-  border-radius:8px;
-}
-
-.tag {
-  background:#f0f0f0;
-  padding:2px 6px;
-  border-radius:4px;
-  font-size:0.65rem;
-  letter-spacing:.5px;
-}
-
-/* class selectpr shows pages */
-.shows-discover-section {
+/* start of classes for the discover section */
+.media-section {
   margin: 20px;
   padding: 10px;
   background-color: #f4f4f4;
   border-radius: 5px;
 }
 
-
-#banner {
-  width:100%; 
-  max-width:900px; 
-  margin:20px auto; 
-  display:block;
-  height: 200px;
-  
+.media-card {
+  background:#fff;
+  border:1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  gap: 4px;
+  font-size: 15px;
 }
 
-/* status label in show*/
+
+.media-grid {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  align-items: start;
+}
+
+.media-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+
+.media-tags span {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  border: 1px solid #ddd;
+  color: #555;
+  display: inline-block;
+}
+
+.media-section img{ 
+  max-width: 100%;
+  height:auto;
+  display: block;
+  object-fit: cover;
+}
 .status{
-  font-size:0.7rem; 
+  font-size:11px; 
   display:flex; 
   flex-direction:column; 
   align-items:flex-start; 
   gap:2px; 
   margin-top:6px;
-}
-
-#logo {
-  height:60px;
-}
-
-
-/* main navigation */
-
-.primary-nav {
-  font-weight: 600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-}
-
-.temp-movie-collage{
-  width:320px;
-   max-width:90vw; 
-   margin:20px auto; 
-   display:block;
-
-}
-
-.show-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  align-items: start;
 }
 
 .actions {
@@ -160,15 +224,8 @@ p {
   padding: 8px 12px;
 }
 
-.show-card {
-  display: flex;
-  flex-direction: column;
-  padding: 8px 10px;
-  gap: 4px;
-}
-/* temp global*/
-img {
-  max-width: 100%;
-  height: auto;
-  display:block;
+/* end of classes for the discover section  in  the shows page */
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }

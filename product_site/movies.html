@@ -2,76 +2,142 @@
 Marvens Sainterlien 
 9/27/2025
 This is the movies page for my website
-Plan to update movies to be something like shows.
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Mtrak Movies</title>
+<title>Mtrack Movies</title>
 
 </head>
 
 <body>
 
+ <!-- ****** START HEADER ****** -->
 
-<!--banner -->
-<img src="images/temp_banner.png" alt=" Banner" id="banner" >
+<div class="header">
+
 <!--logo  -->
-<img src="images/logo2.svg" alt="Mtrack Logo" id="logo">
-
-<!--main header-->
-<h1> Movies</h1>
+<img src="images/logo.svg" alt="Mtrack Logo" id="logo">
 
 <!-- links-->
  <nav class="primary-nav">
-<a href="homepage.html">🏠 Home </a> 
-<a href="shows.html">📺 Shows</a>
-</nav>
+  <a class="nav-link" href="homepage.html">🏠 Home</a>
+  
+    <a class="nav-link  current" href="movies.html">🎬 Movies</a>
+    <a class="nav-link " href="shows.html">📺 Shows</a>
+  
+ </nav>
+
+</div>
+
+ <!-- ****** END HEADER ****** -->
+
+  <!-- ****** START CONTENT ****** -->
+
+<div class="content">
+<!--main header-->
+<h1> Movies</h1>
 
 <!--description-->
 <p>Browse movies, add them to your watchlist, mark favorites, and keep track of what you want to watch next, all in one place!</p>
 
 
-<!--second image -->
-<img src="images/movie_collage.png" alt="Movie Posters Collage" class="temp-movie-collage" >
-<!--table with movies and embedded trailers-->
-<table >
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Trailer</th>
-      <th>IMDb Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Inception</td>
-      <td>
-  <iframe width="250" height="140" src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception Trailer" style="border:none;" allowfullscreen></iframe>
-      </td>
-      <td>8.8</td>
-    </tr>
-    <tr>
-      <td>Black Panther</td>
-      <td>
-  <iframe width="250" height="140" src="https://www.youtube.com/embed/xjDjIWPwcPU" title="Black Panther Trailer" style="border:none;" allowfullscreen></iframe>
-      </td>
-      <td>7.3</td>
-    </tr>
-    <tr>
-      <td>Interstellar</td>
-      <td>
-  <iframe width="250" height="140" src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Interstellar Trailer" style="border:none;" allowfullscreen></iframe>
-      </td>
-      <td>8.6</td>
-    </tr>
-  </tbody>
-</table>
+<!--discover section -->
+
+<section id="meida-section" class="media-discover-section">
+	<h2>🎬 Discover Movies </h2>
+<div class="media-grid">
+
+
+	<!--example 1-->
+	<article class="media-card" data-movie-id="Superman">
+		<img src="images/placeholder.svg" alt="Superman poster">
+		<h3>Superman</h3>
+		<div class="media">
+			<span> 2025 </span>
+			<div class="media-tags">
+				<span >Action</span>
+        <span >Sci-fi</span>
+				
+			</div>
+		</div>
+		<div class="actions">
+			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
+			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
+			<label class="status"> Status
+        <select data-action="status">
+					<option>🕒 Planning</option>
+					<option>Watching</option>
+					<option>✅ Completed</option>
+					<option>On Hold</option>
+					<option>Dropped</option>
+				</select>
+			</label>
+		</div>
+	</article>
+
+
+	<!--example 2-->
+	<article class="media-card" data-movie-id="Avatar">
+		<img src="images/placeholder.svg" alt="Avatar poster">
+		<h3> Avatar </h3>
+		<div class="media-info">
+			<span> 2009 </span>
+			<div class="media-tags">
+				<span >Action</span>
+        <span >Sci-fi</span>
+			</div>
+		</div>
+		<div class="actions">
+			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
+			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
+			<label class="status">Status
+				<select data-action="status">
+					<option>🕒 Planning</option>
+					<option>Watching</option>
+					<option>✅ Completed</option>
+					<option>On Hold</option>
+					<option>Dropped</option>
+				</select>
+			</label>
+		</div>
+	</article>
+
+
+	<!--example 3-->
+	<article class="media-card" data-movie-id="Mission Impossible Fallout">
+		<img src="images/placeholder.svg" alt="Mission Impossible Fallout poster">
+		<h3>Mission Impossible - Fallout</h3>
+		<div class="media-info">
+			<span>2018</span>
+			<div class="media-tags">
+				<span >Action</span>
+				<span >Adventure</span>
+			</div>
+		</div>
+		<div class="actions">
+			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
+			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
+			<label class="status">Status
+				<select data-action="status">
+					<option>🕒 Planning</option>
+					<option>Watching</option>
+					<option>✅ Completed</option>
+					<option>On Hold</option>
+					<option>Dropped</option>
+				</select>
+			</label>
+		</div>
+	</article>
+
+
+</div>
+</section>
 
 <!--form-->
 
@@ -90,6 +156,10 @@ Plan to update movies to be something like shows.
 
   <button type="submit">Submit</button>
 </form>
+
+</div>
+
+ <!-- ****** END CONTENT ****** -->
 
 </body>
 
