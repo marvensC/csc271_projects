@@ -11,6 +11,15 @@ This is the homepage for my website
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mtrack: Discover, organize, and track your favorite movies and shows. Create watchlists, mark favorites, and stay on top of your entertainment in one place.">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Mtrack – Track Your Favorite Movies and Shows" />
+<meta property="og:description" content="Discover, organize, and track your favorite movies and TV shows. Create watchlists, mark favorites, and manage your entertainment easily with Mtrack." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://msainterlien.rhody.dev/csc271_projects/product_site/homepage.html" />
+<meta property="og:image" content="https://msainterlien.rhody.dev/csc271_projects/product_site/images/logo.png" />
+<meta property="og:site_name" content="Mtrack" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN94NVELZQ"></script>
@@ -32,18 +41,16 @@ This is the homepage for my website
 <div class="header">
 
 <!--logo  -->
-<img src="images/logo.svg" alt="Mtrack Logo" id="logo">
+<img src="images/logo.svg" alt="Mtrack Logo - Movie and TV Show Tracker" id="logo">
 
 
 <!--links-->
 
 <nav class="primary-nav">
-  <a class="nav-link current" href="homepage.html">🏠 Home</a>
-  
-    <a class="nav-link " href="movies.html">🎬 Movies</a>
-    <a class="nav-link" href="shows.html">📺 Shows</a>
-    <a class="nav-link " href="https://msainterlien.rhody.dev/csc271_projects/product_site/homepage.html" target="_blank">🌐 Live Website</a>
-    <a class="nav-link " href="mailto:msainterlien@uri.edu">📧 Contact Me</a>
+	<a class="nav-link current" href="homepage.html" title="Go to Mtrack Homepage">🏠 Home</a>
+	<a class="nav-link" href="movies.html" title="Browse Movies on Mtrack">🎬 Movies</a>
+	<a class="nav-link" href="shows.html" title="Browse TV Shows on Mtrack">📺 Shows</a>
+	
  
 </nav>
 
@@ -73,7 +80,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 	<!--example 1-->
 	<article class="media-card" data-show-id="one piece">
-		<img src="images/placeholder.svg" alt="one piece poster">
+		<img src="images/one_piece_poster.webp" alt="One Piece anime poster - Adventure series">
 		<h3>One Piece</h3>
 		<div class="media-info">
 			<span>1997 • 20 Seasons</span>
@@ -100,7 +107,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 	<!--example 2-->
 	<article class="media-card" data-movie-id="Superman">
-		<img src="images/placeholder.svg" alt="Superman poster">
+		<img src="images/superman_poster.webp" alt="Superman movie poster - Action Sci-fi">
 		<h3>Superman</h3>
 		<div class="media">
 			<span> 2025 </span>
@@ -108,6 +115,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 				<span >Action</span>
         <span >Sci-fi</span>
 			</div>
+			
 		</div>
 		<div class="actions">
 			<button type="button" data-action="watchlist" class="watch-btn"> 📋 Add to Watchlist</button>
@@ -127,7 +135,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 	<!--example 3-->
 	<article class="media-card" data-show-id="lucifer">
-		<img src="images/placeholder.svg" alt="lucifer poster">
+		<img src="images/lucifer_poster.webp" alt="Lucifer TV show poster - Drama">
 		<h3>Lucifer </h3>
 		<div class="media-info">
 			<span>2016 • 6 Seasons</span>
@@ -162,7 +170,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 	<!--example 1-->
 	<article class="media-card" data-show-id="one piece">
-		<img src="images/placeholder.svg" alt="one piece poster">
+		<img src="images/one_piece_poster.webp" alt="One Piece anime poster - Adventure series">
 		<h3>One Piece</h3>
 		<div class="media-info">
 			<span>1997 • 20 Seasons</span>
@@ -189,7 +197,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 	<!--example 2-->
 	<article class="media-card" data-movie-id="the mentalist">
-		<img src="images/placeholder.svg" alt="the mentalist poster">
+		<img src="images/the_mentalist_poster.webp" alt="The Mentalist TV show poster - Drama">
 		<h3> The Mentalist</h3>
 		<div class="media">
 			<span> 2008 • 7 Seasons </span>
@@ -215,7 +223,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 	<!--example 3-->
 	<article class="media-card" data-show-id="the day of the jackal">
-		<img src="images/placeholder.svg" alt="the day of the jackal poster">
+		<img src="images/the_day_of_the_jackal_poster.webp" alt="The Day of the Jackal TV show poster - Thriller">
 		<h3>The Day of the Jackal</h3>
 		<div class="media-info">
 			<span>2024 • 1 Season</span>
@@ -248,6 +256,14 @@ Stay on top of your media consumption and never forget what's next on your list!
 </div>
  <!-- ****** END CONTENT ****** -->
 
+	<!-- ****** FOOTER START ****** -->
+	<footer class="footer">
+		<div class="footer-content" >
+			<span class="copyright">&copy; 2025 Mtrack </span>
+			<a class="nav-link" href="mailto:msainterlien@uri.edu" title="Contact Marvens Sainterlien">📧 Contact Us</a>
+		</div>
+	</footer>
+		<!-- ****** FOOTER END ****** -->
 
 
 </body>

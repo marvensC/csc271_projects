@@ -11,6 +11,15 @@ This is the shows page for my website
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mtrack Shows: Browse, track, and organize your favorite TV shows. Add to your watchlist, mark favorites, and keep up with what to watch next.">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Mtrack Shows – Track Your Favorite TV Shows" />
+<meta property="og:description" content="Browse, track, and organize your favorite TV shows. Add to your watchlist, mark favorites, and keep up with what to watch next on Mtrack." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://msainterlien.rhody.dev/csc271_projects/product_site/shows.html" />
+<meta property="og:image" content="https://msainterlien.rhody.dev/csc271_projects/product_site/images/logo.png" />
+<meta property="og:site_name" content="Mtrack" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN94NVELZQ"></script>
@@ -30,15 +39,13 @@ This is the shows page for my website
 	<div class="header">
 
 <!--logo  -->
-<img src="images/logo.svg" alt="Mtrack Logo" id="logo">
+<img src="images/logo.svg" alt="Mtrack Logo - Movie and TV Show Tracker" id="logo">
 
 <!-- links-->
  <nav class="primary-nav">
-	<a class="nav-link " href="homepage.html">🏠 Home</a>
-	
-		<a class="nav-link " href="movies.html">🎬 Movies</a>
-		<a class="nav-link  current" href="shows.html">📺 Shows</a>
-	
+   <a class="nav-link" href="homepage.html" title="Go to Mtrack Homepage">🏠 Home</a>
+   <a class="nav-link" href="movies.html" title="Browse Movies on Mtrack">🎬 Movies</a>
+   <a class="nav-link current" href="shows.html" title="Browse TV Shows on Mtrack">📺 Shows</a>
  </nav>
 
 
@@ -67,7 +74,7 @@ This is the shows page for my website
 
 	<!--example 1-->
 	<article class="media-card" data-show-id="breaking-bad">
-		<img src="images/placeholder.svg" alt="Breaking Bad poster">
+		<img src="images/breaking_bad_poster.webp" alt="Breaking Bad TV show poster - Crime Thriller Action">
 		<h3>Breaking Bad</h3>
 		<div class="media-info">
 			<span>2008 • 5 Seasons</span>
@@ -76,6 +83,9 @@ This is the shows page for my website
 				<span >Thriller</span>
 				<span >Action</span>
 			</div>
+		</div>
+		<div class="trailer">
+			<iframe src="https://www.youtube.com/embed/XZ8daibM3AE?si=px_qntU31vKSV4GA" title="Breaking Bad Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 		</div>
 		<div class="actions">
 			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
@@ -95,13 +105,16 @@ This is the shows page for my website
 
 	<!--example 2-->
 	<article class="media-card" data-show-id="the-office-us">
-		<img src="images/placeholder.svg" alt="The Office (US) poster">
+		<img src="images/the_office_poster.webp" alt="The Office (US) TV show poster - Comedy">
 		<h3>The Office (US)</h3>
 		<div class="media-info">
 			<span>2005 • 9 Seasons</span>
 			<div class="media-tags">
 				<span >Comedy</span>
 			</div>
+		</div>
+		<div class="trailer">
+			<iframe src="https://www.youtube.com/embed/-C2z-nshFts?si=gMcWox1VkiXtY-dP" title="The Office (US) Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 		</div>
 		<div class="actions">
 			<button type="button" data-action="watchlist" class="watch-btn"> 📋 Add to Watchlist</button>
@@ -120,16 +133,17 @@ This is the shows page for my website
 
 
 	<!--example 3-->
-	<article class="media-card" data-show-id="the-mandalorian">
-		<img src="images/placeholder.svg" alt="The Mandalorian poster">
+	<article class="media-card" data-show-id="game-of-thrones">
+		<img src="images/game_of_thrones_poster.webp" alt="game-of-thrones TV show poster - Drama">
 		<h3>The Mandalorian</h3>
 		<div class="media-info">
-			<span>2019 • 3 Seasons</span>
+			<span>2011 • 6 Seasons</span>
 			<div class="media-tags">
-				<span >Sci-Fi</span>
-				<span >Action</span>
-				<span >Adventure</span>
+				<span >Drama</span>
 			</div>
+		</div>
+		<div class="trailer">
+			<iframe src="https://www.youtube.com/embed/bjqEWgDVPe0?si=mRQg6x9Od-TpXZXa" title="game of thrones Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 		</div>
 		<div class="actions">
 			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
@@ -153,6 +167,16 @@ This is the shows page for my website
 </div>
  <!-- ****** END CONTENT ****** -->
 
+
+
+		<!-- ****** FOOTER START ****** -->
+	<footer class="footer">
+		<div class="footer-content" >
+			<span class="copyright">&copy; 2025 Mtrack </span>
+			<a class="nav-link" href="mailto:msainterlien@uri.edu" title="Contact Marvens Sainterlien">📧 Contact Us</a>
+		</div>
+	</footer>
+		<!-- ****** FOOTER END ****** -->
 
 </body>
 </html>

@@ -6,8 +6,7 @@ This is the movies page for my website
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
-  background-color: #f8f9fa; 
+  background: rgb(122, 124, 124);
 }
 
 h1 {
@@ -19,14 +18,14 @@ h1 {
 /*  header class */
 .header {
   background-color: #2563eb; 
-  padding: 10px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: clip; 
   margin: 10px;
   border: 3px solid #e5e7eb;
-  
+  min-height: 48px;
 }
 
 /*  content class */
@@ -80,15 +79,58 @@ a.nav-link {
   color: #0b74de;
 }
 
+.footer {
+  background-color: #2563eb;
+  color: #fff;
+  border-top: 3px solid #e5e7eb;
+  padding: 12px 10px;
+  margin: 0 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border-radius: 0 0 8px 8px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+}
+
+.footer .nav-link {
+  background: #fff;
+  color: #2563eb;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.12s;
+}
+.footer .nav-link:hover {
+  background: #e5e7eb;
+  color: #ac0c0c;
+}
+
+.footer .copyright {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 8px;
+}
+
 /* Media query for screens 600px wide or less */
 @media (max-width: 600px) {
 
   .header {
     flex-direction: column;
-    gap: 10px;
-    padding: 15px 10px;
+    gap: 6px;
+    padding: 6px 8px;
     margin: 0 5px;
     width: 100%;
+    min-height: 32px;
   }
   .content {
     width: 100%;
@@ -107,6 +149,15 @@ a.nav-link {
     font-size: 14px; 
     padding: 6px 10px; 
     text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px 8px;
+    margin: 0 5px;
+    width: 100%;
+    min-height: 32px;
   }
   
   
@@ -135,7 +186,8 @@ img {
 
 /*paragraph*/
 p {
-  color:#000000;
+  color: #000000;
+  text-align: center;
 }
 
 
@@ -150,13 +202,14 @@ p {
   border-radius:8px;
 }
 
-/* start of classes for the discover section */
+/* start of classes for the media section */
 .media-section {
   margin: 20px;
   padding: 10px;
   background-color: #f4f4f4;
   border-radius: 5px;
 }
+
 
 .media-card {
   background:#fff;
@@ -168,11 +221,19 @@ p {
   font-size: 15px;
 }
 
+.media-card h3 {
+  font-size: 16.8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 4px 0;
+}
+
 
 .media-grid {
   display: grid;
-  gap: 4px;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   align-items: start;
 }
 
@@ -182,6 +243,7 @@ p {
   gap: 4px;
   margin-top: 4px;
 }
+
 
 
 .media-tags span {
@@ -195,11 +257,15 @@ p {
   display: inline-block;
 }
 
-.media-section img{ 
-  max-width: 100%;
-  height:auto;
+.media-section img {
+  width: 180px;
+  height: 260px;
+  object-fit: contain;
   display: block;
-  object-fit: cover;
+  margin: 0 auto 8px auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: transparent;
 }
 .status{
   font-size:11px; 
@@ -221,12 +287,6 @@ p {
   padding: 8px 12px;
 }
 
-/* end of classes for the discover section  in  the shows page */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 .trailer {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -239,7 +299,7 @@ p {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   max-width: 100%;
   overflow-x: auto;
-}   
+}
 
 .trailer iframe {
   border-radius: 6px;
@@ -248,4 +308,15 @@ p {
   height: 180px;
   min-width: 220px;
   background: #000;
+ 
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
 }
+
+/* end of classes for the media sections page */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
