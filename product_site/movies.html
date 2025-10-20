@@ -10,6 +10,15 @@ This is the movies page for my website
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mtrack Movies: Discover, organize, and track your favorite movies. Create watchlists, mark favorites, and manage your entertainment easily.">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Mtrack Movies – Track Your Favorite Movies" />
+<meta property="og:description" content="Discover, organize, and track your favorite movies. Create watchlists, mark favorites, and manage your entertainment easily with Mtrack." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://msainterlien.rhody.dev/csc271_projects/product_site/movies.html" />
+<meta property="og:image" content="https://msainterlien.rhody.dev/csc271_projects/product_site/images/logo.png" />
+<meta property="og:site_name" content="Mtrack" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN94NVELZQ"></script>
 <script>
@@ -31,14 +40,13 @@ This is the movies page for my website
 <div class="header">
 
 <!--logo  -->
-<img src="images/logo.svg" alt="Mtrack Logo" id="logo">
+<img src="images/logo.svg" alt="Mtrack Logo - Movie and TV Show Tracker" id="logo">
 
 <!-- links-->
  <nav class="primary-nav">
-  <a class="nav-link" href="homepage.html">🏠 Home</a>
-  
-    <a class="nav-link  current" href="movies.html">🎬 Movies</a>
-    <a class="nav-link " href="shows.html">📺 Shows</a>
+	<a class="nav-link" href="homepage.html" title="Go to Mtrack Homepage">🏠 Home</a>
+	<a class="nav-link current" href="movies.html" title="Browse Movies on Mtrack">🎬 Movies</a>
+	<a class="nav-link" href="shows.html" title="Browse TV Shows on Mtrack">📺 Shows</a>
   
  </nav>
 
@@ -65,7 +73,7 @@ This is the movies page for my website
 
 	<!--example 1-->
 	<article class="media-card" data-movie-id="Superman">
-		<img src="images/superman_poster.webp" alt="Superman poster">
+		<img src="images/superman_poster.webp" alt="Superman movie poster - Action Sci-fi">
 		<h3>Superman</h3>
 		<div class="media">
 			<span> 2025 </span>
@@ -74,10 +82,11 @@ This is the movies page for my website
         <span >Sci-fi</span>
 				
 			</div>
-			<div class="trailer">
-    <iframe width="250" height="140" src="https://www.youtube.com/embed/Ox8ZLF6cGM0?si=nQkjpXrrjYyDpG9o" title="Superman Trailer" style="border:none;" allowfullscreen></iframe>
-  </div>
-		</div>
+		<div class="trailer">
+		<iframe src="https://www.youtube.com/embed/Ox8ZLF6cGM0?si=nQkjpXrrjYyDpG9o" title="Superman Trailer" allowfullscreen></iframe>
+  	</div>
+	</div>
+	
 		<div class="actions">
 			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
 			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
@@ -96,7 +105,7 @@ This is the movies page for my website
 
 	<!--example 2-->
 	<article class="media-card" data-movie-id="Avatar">
-		<img src="images/placeholder.svg" alt="Avatar poster">
+		<img src="images/avatar_poster.webp" alt="Avatar movie poster - Action Sci-fi">
 		<h3> Avatar </h3>
 		<div class="media-info">
 			<span> 2009 </span>
@@ -104,7 +113,11 @@ This is the movies page for my website
 				<span >Action</span>
         <span >Sci-fi</span>
 			</div>
+			
 		</div>
+		<div class="trailer">
+	<iframe src="https://www.youtube.com/embed/5PSNL1qE6VY?si=strYPtVmJPydYjeb" title="Avatar Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+  </div>
 		<div class="actions">
 			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
 			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
@@ -122,16 +135,19 @@ This is the movies page for my website
 
 
 	<!--example 3-->
-	<article class="media-card" data-movie-id="Mission Impossible Fallout">
-		<img src="images/placeholder.svg" alt="Mission Impossible Fallout poster">
-		<h3>Mission Impossible - Fallout</h3>
+	<article class="media-card" data-movie-id="Inception">
+		<img src="images/inception_poster.webp" alt="Inception movie poster - Action Sci-fi">
+		<h3 >Inception</h3>
 		<div class="media-info">
-			<span>2018</span>
+			<span>2010</span>
 			<div class="media-tags">
 				<span >Action</span>
-				<span >Adventure</span>
+				<span >Sci-fi</span>
 			</div>
 		</div>
+		<div class="trailer">
+	<iframe src="https://www.youtube.com/embed/YoHD9XEInc0?si=Zqysq6u1hgsLoF33" title="Inception Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+  </div>
 		<div class="actions">
 			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
 			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
@@ -173,6 +189,16 @@ This is the movies page for my website
 
  <!-- ****** END CONTENT ****** -->
 
+
+
+	<!-- ****** FOOTER START ****** -->
+	<footer class="footer">
+		<div class="footer-content" >
+			<span class="copyright">&copy; 2025 Mtrack </span>
+			<a class="nav-link" href="mailto:msainterlien@uri.edu" title="Contact Marvens Sainterlien">📧 Contact Us</a>
+		</div>
+	</footer>
+		<!-- ****** FOOTER END ****** -->
 </body>
 
 </html>
