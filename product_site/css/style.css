@@ -212,13 +212,20 @@ p {
 
 
 .media-card {
-  background:#fff;
-  border:1px solid #ccc;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
-  padding: 8px 10px;
+  
   gap: 4px;
   font-size: 15px;
+  overflow: hidden;
+}
+
+.media-card > *:not(.media-actions) {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .media-card h3 {
@@ -233,7 +240,7 @@ p {
 .media-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   align-items: start;
 }
 
@@ -287,6 +294,47 @@ p {
   padding: 8px 12px;
 }
 
+/*new buttons */
+
+
+.media-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 5px 5px 5px 4px;
+  border-top: 1px solid #222831;
+  background: #4f5154;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 -2px 8px rgba(187, 51, 51, 0.08);
+  box-sizing: border-box;
+}
+
+.action-btns {
+  background: none;
+  font-size: 23px;
+  cursor: pointer;
+  padding: 0 2px;
+  transition: color 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.18));
+}
+.action-btns[title="Add to Favorites"] { color: #f59e42; }
+.action-btns[title="Mark as Complete"] { color: #7c3aed; }
+.action-btns[title="Add to Watchlist"] { color: #38bdf8; }
+.action-btns[title="Add to Library"] { color: #22c55e; }
+
+
+
+.action-btns[title="Add to Favorites"]:hover { color: #ffb300; transform: scale(1.08); }
+.action-btns[title="Mark as Complete"]:hover { color: #a78bfa; transform: scale(1.08); }
+.action-btns[title="Add to Watchlist"]:hover { color: #2563eb; transform: scale(1.08); }
+.action-btns[title="Add to Library"]:hover { color: #16a34a; transform: scale(1.08); }
+
 .trailer {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -320,3 +368,6 @@ p {
   box-sizing: border-box;
 }
 
+.recommendations {
+   margin-top:16px;
+}
