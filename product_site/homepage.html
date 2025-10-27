@@ -89,19 +89,14 @@ Stay on top of your media consumption and never forget what's next on your list!
 				
 			</div>
 		</div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status"> Status
-        <select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
+		<div class="media-actions">
+		
+		<button type="button" class="action-btns" title="Add to Library">📗</button>
+		<button type="button" class="action-btns" title="Add to Watchlist">📋</button>
+		<button type="button" class="action-btns" title="Mark as Complete">✔️</button>
+		<button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
 		</div>
+
 	</article>
 
 
@@ -117,18 +112,11 @@ Stay on top of your media consumption and never forget what's next on your list!
 			</div>
 			
 		</div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn"> 📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status">Status
-				<select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
+		<div class="media-actions">
+			<button type="button" class="action-btns" title="Add to Library">📗</button>
+			<button type="button" class="action-btns" title="Add to Watchlist">📋</button>
+			<button type="button" class="action-btns" title="Mark as Complete">✔️</button>
+			<button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
 		</div>
 	</article>
 
@@ -143,18 +131,11 @@ Stay on top of your media consumption and never forget what's next on your list!
 				<span >Drama</span>
 			</div>
 		</div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status">Status
-				<select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
+		<div class="media-actions">
+			<button type="button" class="action-btns" title="Add to Library">📗</button>
+			<button type="button" class="action-btns" title="Add to Watchlist">📋</button>
+			<button type="button" class="action-btns" title="Mark as Complete">✔️</button>
+			<button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
 		</div>
 	</article>
 
@@ -179,18 +160,11 @@ Stay on top of your media consumption and never forget what's next on your list!
 				
 			</div>
 		</div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status"> Status
-        <select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
+		<div class="media-actions">
+			<button type="button" class="action-btns" title="Add to Library">📗</button>
+			<button type="button" class="action-btns" title="Add to Watchlist">📋</button>
+			<button type="button" class="action-btns" title="Mark as Complete">✔️</button>
+			<button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
 		</div>
 	</article>
 
@@ -251,6 +225,30 @@ Stay on top of your media consumption and never forget what's next on your list!
 </section>
 
 
+<!-- Recommendations Section -->
+<section class="media-section">
+
+	
+	
+	<h2>🎯 Recommendations</h2>
+	<div>
+		<label for="genre-select"><strong>Choose a genre:</strong></label>
+		<select id="genre-select">
+			<option value="Action">Action</option>
+			<option value="Drama">Drama</option>
+			<option value="Comedy">Comedy</option>
+			<option value="Fantasy">Fantasy</option>
+		</select>
+		<button id="recommend-btn" type="button">Get Recommendations</button>
+	</div>
+
+	<p>showing recommendations for: </p>
+		
+	<div class="recommendations" ></div>
+
+
+
+</section>
 
 
 </div>
@@ -266,5 +264,6 @@ Stay on top of your media consumption and never forget what's next on your list!
 		<!-- ****** FOOTER END ****** -->
 
 
+	<script src="js/recommendation.js"></script>
 </body>
 </html>
