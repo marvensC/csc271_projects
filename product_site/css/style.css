@@ -167,6 +167,11 @@ a.nav-link {
     height: auto;
     max-height: none; 
   }
+
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
 }
 
 /* img styling */
@@ -240,7 +245,7 @@ p {
 .media-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   align-items: start;
 }
 
@@ -274,6 +279,7 @@ p {
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   background: transparent;
 }
+
 .status{
   font-size:11px; 
   display:flex; 
@@ -282,7 +288,6 @@ p {
   gap:2px; 
   margin-top:6px;
 }
-
 .actions {
   display: flex;
   flex-direction: column;
@@ -343,21 +348,22 @@ p {
   align-items: center;
   background: #222831;
   border-radius: 8px;
-  padding: 8px;
+  padding: 8px 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  max-width: 100%;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: auto;
 }
 
 .trailer iframe {
   border-radius: 6px;
   border: none;
-  max-width: 100%;
-  height: 180px;
-  min-width: 220px;
   background: #000;
- 
-  width: 100%;
+  width: 200px;
+  height: 180px;
+  max-width: 100%;
+  min-width: 220px;
   aspect-ratio: 16/9;
   display: block;
 }
@@ -370,4 +376,8 @@ p {
 
 .recommendations {
    margin-top:16px;
+}
+
+.js-fallback {
+  display:none;
 }
