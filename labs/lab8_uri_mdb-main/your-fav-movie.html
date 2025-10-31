@@ -1,0 +1,101 @@
+<!-- TO DO: 
+     Rename this file after your favorite movie title (e.g., mean-girls.html). 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Superman - Movie Details</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Inline CSS for custom styling of the movie image -->
+        <style>
+            .movie-image {
+                width: 150px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Header section of the webpage -->
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="URI-MDB Logo"></a>
+            </div>
+            <!-- Main page title -->
+            <h1>Superman</h1>
+        </header>
+        
+        <main>
+            <!-- Container with detailed information about your favorite movie. 
+                DON'T MAKE ANY CHANGES TO THIS HTML! You will add content dynamically using JS! 
+            -->
+            <div class="movie-info">
+                <img class="movie-image" src="img/placeholder.png" alt="Movie Thumbnail">
+                <h2 class="movie-name">Movie Name</h2>
+                <div class="rating" data-rating="0"></div>
+                <p class="description">Movie description...</p>
+            </div>
+
+            <br />
+            <hr />
+
+            <!-- User Reviews section -->
+            <section class="reviews">
+
+                <!-- Header for the reviews section with a rating filter dropdown -->
+                <div class="reviews-header">
+                    <h3>User Reviews</h3>
+                    <div class="filter">
+
+                        <!-- Filter label and dropdown to filter reviews by rating -->
+                        <label for="rating-filter">Filter by rating:</label>
+                        <select id="rating-filter">
+                            <!-- Filter options for each rating level and 'All' option -->
+                            <option value="All">All</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Review card with placeholders for each review's details -->
+                <div class="review-card">
+                    <div class="review-rating" data-rating="0"></div>
+                    <p class="review-username">Username <span class="review-date">Date</span></p>
+                    <p class="review-text">Review...</p>
+                </div>
+
+               <!-- Review card with placeholders for each review's details -->
+               <div class="review-card">
+                    <div class="review-rating" data-rating="0"></div>
+                    <p class="review-username">Username <span class="review-date">Date</span></p>
+                    <p class="review-text">Review...</p>
+                </div>
+
+                <!-- Review card with placeholders for each review's details -->
+                <div class="review-card">
+                    <div class="review-rating" data-rating="0"></div>
+                    <p class="review-username">Username <span class="review-date">Date</span></p>
+                    <p class="review-text">Review...</p>
+                </div>
+                
+            </section>
+        </main>
+
+
+        <!-- TO DO: 
+             Insert the external JS file called "movie-info.js" 
+             Insert the external JS file called "reviews.js" 
+        -->
+
+        <script src="js/movie-info.js"></script>
+        <script src ="js/reviews.js"></script>
+    </body>
+</html>

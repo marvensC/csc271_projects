@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    background-color: #81bbde;
+    padding: 1rem;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+}
+
+.filter {
+    display: flex;
+    align-items: right;
+}
+
+.filter label {
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    width: 250px;
+    height: 450px;
+}
+
+.movie-image {
+    width: 100%;
+    height: 75%;
+}
+
+.rating {
+    font-size: 24px;
+    color: gold;
+    margin: 10px 0;
+}
+
+.movie-link {
+    font-size: 1.5em;
+    padding: 10px;
+    color: #333;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    font-size: 1em;
+    color: #333;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reviews h3 {
+    font-size: 1.4em;
+}
+
+.filter label {
+    margin-right: 10px;
+}
+
+.review-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.review-rating {
+    font-size: 1.2em;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.review-username {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-date {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #777;
+    margin-left: 5px;
+}
+
+.review-text {
+    font-size: 1em;
+    color: #333;
+}
