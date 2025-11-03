@@ -71,89 +71,8 @@ This is the shows page for my website
 	<h2>📺 Discover Shows </h2>
 <div class="media-grid">
 
-
-	<!--example 1-->
-	<article class="media-card" data-show-id="breaking-bad">
-		<img src="images/breaking_bad_poster.webp" alt="Breaking Bad TV show poster - Crime Thriller Action">
-		<h3>Breaking Bad</h3>
-		<div class="media-info">
-			<span>2008 • 5 Seasons</span>
-			<div class="media-tags">
-				<span >Crime</span>
-				<span >Thriller</span>
-				<span >Action</span>
-			</div>
-		</div>
-		<div class="trailer">
-			<iframe src="https://www.youtube.com/embed/XZ8daibM3AE?si=px_qntU31vKSV4GA" title="Breaking Bad Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-		</div>
-		<div class="media-actions">
-			<button type="button" class="action-btns" title="Add to Library">📗</button>
-			<button type="button" class="action-btns" title="Add to Watchlist">📋</button>
-			<button type="button" class="action-btns" title="Mark as Complete">✔️</button>
-			<button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
-		</div>
-	</article>
-
-
-	<!--example 2-->
-	<article class="media-card" data-show-id="the-office-us">
-		<img src="images/the_office_poster.webp" alt="The Office (US) TV show poster - Comedy">
-		<h3>The Office (US)</h3>
-		<div class="media-info">
-			<span>2005 • 9 Seasons</span>
-			<div class="media-tags">
-				<span >Comedy</span>
-			</div>
-		</div>
-		<div class="trailer">
-			<iframe src="https://www.youtube.com/embed/-C2z-nshFts?si=gMcWox1VkiXtY-dP" title="The Office (US) Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-		</div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn"> 📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status">Status
-				<select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
-		</div>
-	</article>
-
-
-	<!--example 3-->
-	<article class="media-card" data-show-id="game-of-thrones">
-		<img src="images/game_of_thrones_poster.webp" alt="game-of-thrones TV show poster - Drama">
-		<h3>The Mandalorian</h3>
-		<div class="media-info">
-			<span>2011 • 6 Seasons</span>
-			<div class="media-tags">
-				<span >Drama</span>
-			</div>
-		</div>
-		<div class="trailer">
-			<iframe src="https://www.youtube.com/embed/bjqEWgDVPe0?si=mRQg6x9Od-TpXZXa" title="game of thrones Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-		</div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status">Status
-				<select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
-		</div>
-	</article>
-
-
+  <p class="js-fallback" >Unable to load shows. Please try again later.</p>
+	
 </div>
 </section>
 
@@ -171,5 +90,6 @@ This is the shows page for my website
 	</footer>
 		<!-- ****** FOOTER END ****** -->
 
+<script src="js/getshows.js"></script>
 </body>
 </html>

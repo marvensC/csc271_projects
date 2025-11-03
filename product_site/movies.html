@@ -70,93 +70,8 @@ This is the movies page for my website
 	<h2>🎬 Discover Movies </h2>
 <div class="media-grid">
 
-
-	<!--example 1-->
-	<article class="media-card" data-movie-id="Superman">
-		<img src="images/superman_poster.webp" alt="Superman movie poster - Action Sci-fi">
-		<h3>Superman</h3>
-		<div class="media">
-			<span> 2025 </span>
-			<div class="media-tags">
-				<span >Action</span>
-        <span >Sci-fi</span>
-				
-			</div>
-		<div class="trailer">
-		<iframe src="https://www.youtube.com/embed/Ox8ZLF6cGM0?si=nQkjpXrrjYyDpG9o" title="Superman Trailer" allowfullscreen></iframe>
-  	</div>
-	</div>
+  <p class="js-fallback" >Unable to load movies. Please try again later.</p>
 	
-		<div class="media-actions">
-			<button type="button" class="action-btns" title="Add to Library">📗</button>
-			<button type="button" class="action-btns" title="Add to Watchlist">📋</button>
-			<button type="button" class="action-btns" title="Mark as Complete">✔️</button>
-			<button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
-		</div>
-	</article>
-
-
-	<!--example 2-->
-	<article class="media-card" data-movie-id="Avatar">
-		<img src="images/avatar_poster.webp" alt="Avatar movie poster - Action Sci-fi">
-		<h3> Avatar </h3>
-		<div class="media-info">
-			<span> 2009 </span>
-			<div class="media-tags">
-				<span >Action</span>
-        <span >Sci-fi</span>
-			</div>
-			
-		</div>
-		<div class="trailer">
-	<iframe src="https://www.youtube.com/embed/5PSNL1qE6VY?si=strYPtVmJPydYjeb" title="Avatar Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-  </div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status">Status
-				<select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
-		</div>
-	</article>
-
-
-	<!--example 3-->
-	<article class="media-card" data-movie-id="Inception">
-		<img src="images/inception_poster.webp" alt="Inception movie poster - Action Sci-fi">
-		<h3 >Inception</h3>
-		<div class="media-info">
-			<span>2010</span>
-			<div class="media-tags">
-				<span >Action</span>
-				<span >Sci-fi</span>
-			</div>
-		</div>
-		<div class="trailer">
-	<iframe src="https://www.youtube.com/embed/YoHD9XEInc0?si=Zqysq6u1hgsLoF33" title="Inception Trailer" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-  </div>
-		<div class="actions">
-			<button type="button" data-action="watchlist" class="watch-btn">📋 Add to Watchlist</button>
-			<button type="button" data-action="favorite" class="fav-btn" aria-pressed="false">⭐ Favorite</button>
-			<label class="status">Status
-				<select data-action="status">
-					<option>🕒 Planning</option>
-					<option>Watching</option>
-					<option>✅ Completed</option>
-					<option>On Hold</option>
-					<option>Dropped</option>
-				</select>
-			</label>
-		</div>
-	</article>
-
-
 </div>
 </section>
 
@@ -164,12 +79,12 @@ This is the movies page for my website
 
 <form id="favoriteForm" class="stack">
   <h3>Share Your Favorites</h3>
-  <label><strong>Favorite Genres:</strong></label><br>
-  <input type="checkbox" name="genre" value="Action"> Action <br>
-  <input type="checkbox" name="genre" value="Comedy"> Comedy <br>
-  <input type="checkbox" name="genre" value="Drama"> Drama <br>
-  <input type="checkbox" name="genre" value="Sci-Fi"> Sci-Fi <br>
-  <input type="checkbox" name="genre" value="Horror"> Horror<br><br>
+  <strong>Favorite Genres:</strong><br>
+  <label><input type="checkbox" name="genre" value="Action"> Action</label><br>
+  <label><input type="checkbox" name="genre" value="Comedy"> Comedy</label><br>
+  <label><input type="checkbox" name="genre" value="Drama"> Drama</label><br>
+  <label><input type="checkbox" name="genre" value="Sci-Fi"> Sci-Fi</label><br>
+  <label><input type="checkbox" name="genre" value="Horror"> Horror</label><br><br>
 
   <label for="movieTitles"><strong>Favorite Movies:</strong></label> <br>
   <textarea id="movieTitles" name="movieTitles" maxlength="200" placeholder="Enter your favorite movies" rows="3" style="width:100%;"></textarea> <br>
@@ -192,6 +107,8 @@ This is the movies page for my website
 		</div>
 	</footer>
 		<!-- ****** FOOTER END ****** -->
+	
+	<script src="js/getmovies.js"></script>
 </body>
 
 </html>

@@ -381,3 +381,7 @@ p {
 .js-fallback {
   display:none;
 }
+
+#decision-result {
+  margin-top:20px;
+}
