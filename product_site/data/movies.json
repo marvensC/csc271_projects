@@ -1,0 +1,26 @@
+[
+  {
+    "id": "superman",
+    "title": "Superman",
+    "year": 2025,
+    "tags": ["Action", "Sci-fi"],
+    "poster": "images/superman_poster.webp",
+    "trailer": "https://www.youtube.com/embed/Ox8ZLF6cGM0"
+  },
+  {
+    "id": "avatar",
+    "title": "Avatar",
+    "year": 2009,
+    "tags": ["Action", "Sci-fi"],
+    "poster": "images/avatar_poster.webp",
+    "trailer": "https://www.youtube.com/embed/5PSNL1qE6VY"
+  },
+  {
+    "id": "inception",
+    "title": "Inception",
+    "year": 2010,
+    "tags": ["Action", "Sci-fi"],
+    "poster": "images/inception_poster.webp",
+    "trailer": "https://www.youtube.com/embed/YoHD9XEInc0"
+  }
+]

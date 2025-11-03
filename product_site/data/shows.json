@@ -1,0 +1,65 @@
+[
+  {
+    "id": "one-piece",
+    "title": "One Piece",
+    "year": 1997,
+    "seasons": 20,
+    "tags": ["Adventure"],
+    "poster": "images/one_piece_poster.webp",
+    "trailer": "https://www.youtube.com/embed/1KMcoJBMWE4"
+  },
+  {
+    "id": "lucifer",
+    "title": "Lucifer",
+    "year": 2016,
+    "seasons": 6,
+    "tags": ["Drama"],
+    "poster": "images/lucifer_poster.webp",
+    "trailer": "https://www.youtube.com/embed/X4bF_quwNtw"
+  },
+  {
+    "id": "the-day-of-the-jackal",
+    "title": "The Day of the Jackal",
+    "year": 2024,
+    "seasons": 1,
+    "tags": ["Thriller"],
+    "poster": "images/the_day_of_the_jackal_poster.webp",
+    "trailer": "https://www.youtube.com/embed/shsIx-ZVL0E"
+  },
+  {
+    "id": "breaking-bad",
+    "title": "Breaking Bad",
+    "year": 2008,
+    "seasons": 5,
+    "tags": ["Crime", "Thriller", "Action"],
+    "poster": "images/breaking_bad_poster.webp",
+    "trailer": "https://www.youtube.com/embed/XZ8daibM3AE"
+  },
+  {
+    "id": "the-office-us",
+    "title": "The Office (US)",
+    "year": 2005,
+    "seasons": 9,
+    "tags": ["Comedy"],
+    "poster": "images/the_office_poster.webp",
+    "trailer": "https://www.youtube.com/embed/-C2z-nshFts"
+  },
+  {
+    "id": "game-of-thrones",
+    "title": "The Mandalorian",
+    "year": 2011,
+    "seasons": 6,
+    "tags": ["Drama"],
+    "poster": "images/game_of_thrones_poster.webp",
+    "trailer": "https://www.youtube.com/embed/bjqEWgDVPe0"
+  },
+  {
+    "id": "the-mentalist",
+    "title": "The Mentalist",
+    "year": 2008,
+    "seasons": 7,
+    "tags": ["Drama"],
+    "poster": "images/the_mentalist_poster.webp",
+    "trailer": "https://www.youtube.com/embed/tCpWApgVqbc"
+  }
+]

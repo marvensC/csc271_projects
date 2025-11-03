@@ -1,0 +1,59 @@
+{
+  "watchlist": [
+    {
+      "type": "show",
+      "id": "one-piece",
+      "title": "One Piece",
+      "year": 1997,
+      "seasons": 20,
+      "tags": ["Adventure"],
+      "poster": "images/one_piece_poster.webp"
+    },
+    {
+      "type": "movie",
+      "id": "superman",
+      "title": "Superman",
+      "year": 2025,
+      "tags": ["Action", "Sci-fi"],
+      "poster": "images/superman_poster.webp"
+    },
+    {
+      "type": "show",
+      "id": "lucifer",
+      "title": "Lucifer",
+      "year": 2016,
+      "seasons": 6,
+      "tags": ["Drama"],
+      "poster": "images/lucifer_poster.webp"
+    }
+  ],
+  "favorites": [
+    {
+      "type": "show",
+      "id": "one-piece",
+      "title": "One Piece",
+      "year": 1997,
+      "seasons": 20,
+      "tags": ["Adventure"],
+      "poster": "images/one_piece_poster.webp"
+    },
+    {
+      "type": "movie",
+      "id": "the-mentalist",
+      "title": "The Mentalist",
+      "year": 2008,
+      "seasons": 7,
+      "tags": ["Drama"],
+      "poster": "images/the_mentalist_poster.webp"
+    },
+    {
+      "type": "show",
+      "id": "the-day-of-the-jackal",
+      "title": "The Day of the Jackal",
+      "year": 2024,
+      "seasons": 1,
+      "tags": ["Thriller"],
+      "poster": "images/the_day_of_the_jackal_poster.webp"
+    }
+  ]
+}
