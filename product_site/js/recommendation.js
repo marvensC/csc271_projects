@@ -21,12 +21,6 @@ function sortItems(items, key) {
   });
 }
 
-//  shows the fallback message (no parameters, no return value)
-function showFallbackMessage() {
-  const fallback = document.querySelector('.js-fallback');
-  if (fallback) fallback.style.display = 'block';
-}
-
 // Data: genres mapped to media items with IMDb ratings
 //these are just what i currently have will add more
 const media = {
@@ -111,15 +105,13 @@ if (genreDropdown && recommendBtn && recommendationsSection) {
       // Update recommendations section using innerHTML
       recommendationsSection.innerHTML = html;
 
-      // Also update the paragraph using textContent
-      if (allParagraphs.length > 0) {
-        allParagraphs[5].textContent = `Showing top ${recommendations.length} recommendations for ${selectedGenre}.`;
-      }
-
-      const fallback = document.querySelector('.js-fallback');
+      
+      const fallback = recommendationsSection.querySelector('.js-fallback');
       if (fallback) fallback.style.display = 'none';
     } catch (err) {
-      showFallbackMessage();
+      
+      const fallback = recommendationsSection.querySelector('.js-fallback');
+      if (fallback) fallback.style.display = 'block';
       console.error('Error loading recommendations:', err);
     }
   });
@@ -170,7 +162,7 @@ function getDecisionTreeRecommendation(genre, ratingRange, type) {
 const genreDecision = document.getElementById('genre-decision');
 const ratingDecision = document.getElementById('rating-decision');
 const typeDecision = document.getElementById('type-decision');
-const decisionResult = document.getElementById('decision-result');
+const decisionResult = document.getElementById('smart-recommendations');
 
 if (genreDecision && ratingDecision && typeDecision && decisionResult) {
   document.getElementById('decision-btn').addEventListener('click', function() {
@@ -186,5 +178,6 @@ if (genreDecision && ratingDecision && typeDecision && decisionResult) {
     } else {
       decisionResult.innerHTML = `<p>No recommendation found. Coming Soon!</p>`;
     }
+   
   });
 }

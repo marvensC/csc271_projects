@@ -382,6 +382,6 @@ p {
   display:none;
 }
 
-#decision-result {
+.smart-recommendations{
   margin-top:20px;
 }
