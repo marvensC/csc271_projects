@@ -1,51 +1,54 @@
+
 //Marvens Sainterlien
 //11/01/2025
 // Dynamically load and render user lists (watchlist, favorites) from lists.json
 
 
+//  Fetch JSON from a URL 
+async function fetchJSON(url) {
+	const res = await fetch(url);
+	if (!res.ok) throw new Error('Failed to load ' + url);
+	return await res.json();
+}
+
+//  Render items to a container 
+function renderItems(items, container) {
+	container.innerHTML = '';
+	for (let i = 0; i < items.length; i++) {
+		container.appendChild(createCard(items[i]));
+	}
+}
+
+//shows both fallback messages (no parameters, no return value)
+function showFallbackMessages() {
+	const watchlistGrid = document.querySelector('section.media-section:nth-of-type(1) .media-grid');
+	const watchlistFallback = watchlistGrid ? watchlistGrid.querySelector('.js-fallback') : null;
+	if (watchlistFallback) watchlistFallback.style.display = 'block';
+	const favoritesGrid = document.querySelector('section.media-section:nth-of-type(2) .media-grid');
+	const favoritesFallback = favoritesGrid ? favoritesGrid.querySelector('.js-fallback') : null;
+	if (favoritesFallback) favoritesFallback.style.display = 'block';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-	fetch('data/lists.json')
-		.then(res => {
-			if (!res.ok) throw new Error('Failed to load lists.json');
-			return res.json();
-		})
+	fetchJSON('data/lists.json')
 		.then(lists => {
 			// Watchlist
 			const watchlistGrid = document.querySelector('section.media-section:nth-of-type(1) .media-grid');
 			const watchlistFallback = watchlistGrid ? watchlistGrid.querySelector('.js-fallback') : null;
 			if (watchlistGrid && lists.watchlist) {
-				watchlistGrid.innerHTML = '';
-				for (let i = 0; i < lists.watchlist.length; i++) {
-					watchlistGrid.appendChild(createCard(lists.watchlist[i]));
-				}
-				// For loop chosen for efficient and direct iteration over arrays
+				renderItems(lists.watchlist, watchlistGrid);
 				if (watchlistFallback) watchlistFallback.style.display = 'none';
 			}
 			// Favorites
 			const favoritesGrid = document.querySelector('section.media-section:nth-of-type(2) .media-grid');
 			const favoritesFallback = favoritesGrid ? favoritesGrid.querySelector('.js-fallback') : null;
 			if (favoritesGrid && lists.favorites) {
-				favoritesGrid.innerHTML = '';
-				for (let j = 0; j < lists.favorites.length; j++) {
-					favoritesGrid.appendChild(createCard(lists.favorites[j]));
-				}
-				
+				renderItems(lists.favorites, favoritesGrid);
 				if (favoritesFallback) favoritesFallback.style.display = 'none';
 			}
-
-
-	
-		
 		})
 		.catch(err => {
-
-			// Show both fallbacks on error
-			const watchlistGrid = document.querySelector('section.media-section:nth-of-type(1) .media-grid');
-			const watchlistFallback = watchlistGrid ? watchlistGrid.querySelector('.js-fallback') : null;
-			if (watchlistFallback) watchlistFallback.style.display = 'block';
-			const favoritesGrid = document.querySelector('section.media-section:nth-of-type(2) .media-grid');
-			const favoritesFallback = favoritesGrid ? favoritesGrid.querySelector('.js-fallback') : null;
-			if (favoritesFallback) favoritesFallback.style.display = 'block';
+			showFallbackMessages();
 			console.error('Error loading lists:', err);
 		});
 });

@@ -1,7 +1,31 @@
+
 //Marvens Sainterlien
 //10/26/2025
 //This script adds an interactive recommendations features to the homepage of website.
 
+//  Suggests items based on user preferences
+function getRecommendations(userPrefs, items) {
+  return items.filter(item =>
+    (!userPrefs.type || item.type === userPrefs.type) &&
+    (!userPrefs.minRating || item.rating >= userPrefs.minRating)
+  );
+}
+
+// Sorts items by a specified property (e.g., title, rating)
+function sortItems(items, key) {
+  return items.slice().sort((a, b) => {
+    if (typeof a[key] === 'string') {
+      return a[key].localeCompare(b[key]);
+    }
+    return b[key] - a[key];
+  });
+}
+
+//  shows the fallback message (no parameters, no return value)
+function showFallbackMessage() {
+  const fallback = document.querySelector('.js-fallback');
+  if (fallback) fallback.style.display = 'block';
+}
 
 // Data: genres mapped to media items with IMDb ratings
 //these are just what i currently have will add more
@@ -14,7 +38,7 @@ const media = {
   Drama: [
     { title: "Breaking Bad", rating: 9.5, img: "images/breaking_bad_poster.webp", type: "show" },
     { title: "The Day of the Jackal", rating: 7.7, img: "images/the_day_of_the_jackal_poster.webp", type:"show" },
-    { title: "The Mentalist", rating: 8.1, img: "images/the_mentalist_poster.webp", type:"show" }
+    { title: "The Mentalist", rating: 8.1, img: "images/the_mentalist_poster.webp", type:"show" } 
   ],
   Comedy: [
     { title: "The Office", rating: 8.9, img: "images/the_office_poster.webp" , type:"show"}
@@ -63,8 +87,16 @@ if (genreDropdown && recommendBtn && recommendationsSection) {
       // Get media items for selected genre
       const items = media[selectedGenre] || [];
 
-      // Sort items by rating 
-      const sortedItems = items.slice().sort((a, b) => b.rating - a.rating);
+      const userPrefs = {
+        type: '', 
+        minRating: 0 
+      };
+
+      // Use getRecommendations to filter items
+      const filteredItems = getRecommendations(userPrefs, items);
+
+      // Use sortItems to sort by rating
+      const sortedItems = sortItems(filteredItems, 'rating');
 
       // Get top recommendations 
       const recommendations = sortedItems.slice(0, 5);
@@ -87,8 +119,7 @@ if (genreDropdown && recommendBtn && recommendationsSection) {
       const fallback = document.querySelector('.js-fallback');
       if (fallback) fallback.style.display = 'none';
     } catch (err) {
-      const fallback = document.querySelector('.js-fallback');
-      if (fallback) fallback.style.display = 'block';
+      showFallbackMessage();
       console.error('Error loading recommendations:', err);
     }
   });
@@ -125,11 +156,10 @@ function getDecisionTreeRecommendation(genre, ratingRange, type) {
   } else if (ratingRange.trim().toLowerCase() === "low") {
     filtered = filtered.filter(item => item.rating < 8.5);
   }
-  // Debug: log filtered list
-  console.log('Filtered items:', filtered);
+  
 
-  // Sort by rating descending
-  filtered.sort((a, b) => b.rating - a.rating);
+  
+  filtered = sortItems(filtered, 'rating');
 
   if (filtered.length > 0) {
     return filtered[0]; // Return the whole item object
@@ -158,4 +188,3 @@ if (genreDecision && ratingDecision && typeDecision && decisionResult) {
     }
   });
 }
-
