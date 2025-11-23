@@ -3,7 +3,9 @@
     "id": "superman",
     "title": "Superman",
     "year": 2025,
-    "tags": ["Action", "Sci-fi"],
+      "genres": ["Action", "Sci-fi"],
+      "description": "An alien from Krypton uses his superpowers to protect Earth as Superman.",
+        "rating": 7.4,
     "poster": "images/superman_poster.webp",
     "trailer": "https://www.youtube.com/embed/Ox8ZLF6cGM0"
   },
@@ -11,7 +13,9 @@
     "id": "avatar",
     "title": "Avatar",
     "year": 2009,
-    "tags": ["Action", "Sci-fi"],
+      "genres": ["Action", "Sci-fi"],
+      "description": "A paraplegic Marine is dispatched to the moon Pandora on a unique mission.",
+        "rating": 7.9,
     "poster": "images/avatar_poster.webp",
     "trailer": "https://www.youtube.com/embed/5PSNL1qE6VY"
   },
@@ -19,7 +23,9 @@
     "id": "inception",
     "title": "Inception",
     "year": 2010,
-    "tags": ["Action", "Sci-fi"],
+      "genres": ["Action", "Sci-fi"],
+      "description": "A thief who steals corporate secrets through dream-sharing technology is given an inverse task.",
+        "rating": 8.8,
     "poster": "images/inception_poster.webp",
     "trailer": "https://www.youtube.com/embed/YoHD9XEInc0"
   }

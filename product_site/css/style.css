@@ -222,10 +222,15 @@ p {
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  
   gap: 4px;
   font-size: 15px;
   overflow: hidden;
+  transition: box-shadow 0.18s, transform 0.14s, background 0.18s;
+  cursor: pointer;
+}
+
+.media-card:hover {
+  transform: scale(1.055);
 }
 
 .media-card > *:not(.media-actions) {
@@ -249,7 +254,7 @@ p {
   align-items: start;
 }
 
-.media-tags {
+.media-genres {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -258,7 +263,7 @@ p {
 
 
 
-.media-tags span {
+.media-genres span {
   background: #f0f0f0;
   padding: 2px 6px;
   border-radius: 4px;
@@ -340,33 +345,7 @@ p {
 .action-btns[title="Add to Watchlist"]:hover { color: #2563eb; transform: scale(1.08); }
 .action-btns[title="Add to Library"]:hover { color: #16a34a; transform: scale(1.08); }
 
-.trailer {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #222831;
-  border-radius: 8px;
-  padding: 8px 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  max-width: 240px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: auto;
-}
 
-.trailer iframe {
-  border-radius: 6px;
-  border: none;
-  background: #000;
-  width: 200px;
-  height: 180px;
-  max-width: 100%;
-  min-width: 220px;
-  aspect-ratio: 16/9;
-  display: block;
-}
 
 /* end of classes for the media sections page */
 
@@ -384,4 +363,131 @@ p {
 
 .smart-recommendations{
   margin-top:20px;
+}
+
+
+/* Media Details Modal */
+#media-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#media-details-modal[style*="display: none"] {
+  display: none !important;
+}
+
+#media-details-modal .media-details-content {
+  background: #fff;
+  max-width: 900px;
+  min-width: 320px;
+  width: 95vw;
+  padding: 2.2em 2.5em 2.2em 2.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px #0008;
+  position: relative;
+}
+
+#media-details-modal .media-details-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+#media-details-modal .media-details-close:hover {
+  color: #ac0c0c;
+}
+
+#media-details-modal h2 {
+  margin-top: 0;
+}
+
+#media-details-modal iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  min-height: 180px;
+  max-height: 360px;
+  border-radius: 6px;
+  border: none;
+  background: #000;
+  display: block;
+  margin-bottom: 1em;
+}
+
+#media-details-modal strong {
+  color: #2563eb;
+}
+
+@media (max-width: 900px) {
+  #media-details-modal .media-details-content {
+    max-width: 99vw;
+    padding: 1.2em 0.5em;
+  }
+  .media-details-flex {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .media-details-poster img {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto 12px auto;
+    display: block;
+  }
+  .media-details-info {
+    min-width: 0;
+  }
+  #media-details-modal iframe {
+    min-height: 140px;
+    max-height: 220px;
+  }
+}
+.media-details-wide {
+  max-width: 900px;
+  min-width: 320px;
+}
+.media-details-flex {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.media-details-poster img {
+  width: 180px;
+  max-width: 40vw;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0002;
+}
+.media-details-info {
+  flex: 1 1 320px;
+  min-width: 220px;
+}
+.media-details-year {
+  font-weight: normal;
+  color: #444;
+}
+.media-details-meta {
+  margin-bottom: 0.7em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.media-details-description {
+  margin-bottom: 1em;
+}
+.media-details-trailer {
+  margin: 1.5em 0 0 0;
 }
