@@ -345,8 +345,6 @@ p {
 .action-btns[title="Add to Watchlist"]:hover { color: #2563eb; transform: scale(1.08); }
 .action-btns[title="Add to Library"]:hover { color: #16a34a; transform: scale(1.08); }
 
-
-
 /* end of classes for the media sections page */
 
 *, *::before, *::after {
@@ -431,7 +429,7 @@ p {
   color: #2563eb;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   #media-details-modal .media-details-content {
     max-width: 99vw;
     padding: 1.2em 0.5em;
