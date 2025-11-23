@@ -6,16 +6,6 @@ export function showMediaDetails(media) {
     if (!modal) {
         modal = document.createElement('div');
         modal.id = 'media-details-modal';
-        modal.style.position = 'fixed';
-        modal.style.top = '0';
-        modal.style.left = '0';
-        modal.style.width = '100vw';
-        modal.style.height = '100vh';
-        modal.style.background = 'rgba(0,0,0,0.7)';
-        modal.style.display = 'flex';
-        modal.style.alignItems = 'center';
-        modal.style.justifyContent = 'center';
-        modal.style.zIndex = '9999';
         document.body.appendChild(modal);
     }
     modal.innerHTML = `
