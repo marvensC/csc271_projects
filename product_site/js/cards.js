@@ -16,12 +16,16 @@ export function renderMediaCard(item) {
       <img src="${item.poster || item.img || 'images/placeholder.svg'}" alt="${item.alt || item.title + ' movie poster'}">
       <h3>${item.title}</h3>
       <div class="media-info">${infoHtml}</div>
-      <div class="media-actions">
-        <button type="button" class="action-btns" title="Add to Library">📗</button>
-        <button type="button" class="action-btns" title="Add to Watchlist">📋</button>
-        <button type="button" class="action-btns" title="Mark as Complete">✔️</button>
-        <button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
-      </div>
+      
+        
+     <!--
+      // <div class="media-actions">
+      //   <button type="button" class="action-btns" title="Add to Library">📗</button>
+      //   <button type="button" class="action-btns" title="Add to Watchlist">📋</button>
+      //   <button type="button" class="action-btns" title="Mark as Complete">✔️</button>
+      //   <button type="button" class="action-btns" aria-pressed="false" title="Add to Favorites">⭐</button>
+      // </div>
+       -->
     </article>
   `;
 }
