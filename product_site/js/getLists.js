@@ -73,3 +73,4 @@ function createCard(item) {
 	card.setAttribute('data-id', item.id || '');
 	return card;
 }
+

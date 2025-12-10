@@ -44,6 +44,7 @@ This is the homepage for my website
 <img src="images/logo.svg" alt="Mtrack Logo - Movie and TV Show Tracker" id="logo">
 
 
+
 <!--links-->
 
 <nav class="primary-nav">
@@ -125,7 +126,7 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 <!-- Decision Tree Recommendation Section -->
 <section class="media-section">
-  <h2>🔎 Smart Recommendation (Decision Tree)</h2>
+  <h2>🔎 Smart Recommendation </h2>
   <div>
 			<label for="genre-decision"><strong>Genre:</strong></label>
 			<select id="genre-decision">
@@ -154,7 +155,45 @@ Stay on top of your media consumption and never forget what's next on your list!
 	</div>
 </section>
 
+<!--form-->
 
+<form id="favoriteForm" class="stack">
+	<h3>Share Your Favorites</h3>
+	<label for="userName"><strong>Name:</strong></label><br>
+	<input type="text" id="userName" name="userName" maxlength="40" placeholder="Enter your name" style="width:100%;margin-bottom:10px;" required><br><br>
+
+	<strong>Favorite Genres:</strong><br>
+	<label><input type="checkbox" name="genre" value="Action"> Action</label><br>
+	<label><input type="checkbox" name="genre" value="Comedy"> Comedy</label><br>
+	<label><input type="checkbox" name="genre" value="Drama"> Drama</label><br>
+	<label><input type="checkbox" name="genre" value="Sci-Fi"> Sci-Fi</label><br>
+	<label><input type="checkbox" name="genre" value="Horror"> Horror</label><br><br>
+
+	<label for="movieTitles"><strong>Favorite Movies/Shows, Why?:</strong></label> <br>
+	<textarea id="movieTitles" name="movieTitles" maxlength="200" placeholder="Enter your favorite movies" rows="3" style="width:100%;"></textarea> <br>
+	<br>
+
+	<button type="submit">Submit</button>
+</form>
+
+<!-- Table for Form Responses -->
+<div class="form-responses-container">
+	<div class="form-responses styled-form-box">
+		<h3>Submitted Favorites</h3>
+		<table id="responsesTable" class="styled-table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Favorite Genres</th>
+					<th>Favorite Movies/Shows</th>
+				</tr>
+			</thead>
+			<tbody>
+        
+			</tbody>
+		</table>
+	</div>
+</div>
 
 </div>
 
@@ -171,5 +210,6 @@ Stay on top of your media consumption and never forget what's next on your list!
 
 	<script type="module" src="js/recommendation.js"></script>
 	<script type="module" src="js/getLists.js"></script>
+	<script src="js/form-events.js"></script>
 </body>
 </html> 
